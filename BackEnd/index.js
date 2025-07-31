@@ -1,8 +1,10 @@
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
 
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
 
 const users = [
     {
@@ -31,3 +33,6 @@ app.post('/usuarios', function(request, response){
 //aqui tenho a porta do meu servidor rodando
 app.listen(30001, () => console.log("servidor rodando"));
 
+
+
+// para entrar no servidor: npm run dev
